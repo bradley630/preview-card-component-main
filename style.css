@@ -1,0 +1,119 @@
+:root{
+    /* ### Primary */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* ### Neutral */
+    --main-bg:hsl(217, 54%, 11%);
+    --card-bg:hsl(216, 50%, 16%);
+
+    --line:hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--white);
+}
+.text-cyan{
+    color: var(--Cyan);
+}
+main{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--main-bg);
+    padding-block: 70px;
+}
+.card-container{
+    background-color: var(--card-bg);
+    max-width: 360px;
+    margin-inline: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 0px 42px rgba(0, 0, 0, 0.05), 0px 25px 0px 16px rgba(0, 0, 0, 0.1);
+}
+.image-section{
+    position: relative;
+    cursor: pointer;
+}
+.image-section img{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+.image-section .icon-view{
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+}
+.image-section:hover .overlay-img{
+    position: absolute;
+    opacity: .5;
+    inset: 0;
+    background-color: var(--Cyan);
+    color: var(--white);
+    border-radius: 8px;
+    transition: .3s ease;
+}
+.image-section:hover .icon-view{
+    opacity: 1;
+}
+.card-content{
+    padding-block: 30px;
+    border-bottom: 1px solid var(--line);
+}
+.card-content h3:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.card-content > p{
+    padding-block: 20px;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--Soft-blue);
+}
+.card-content .flex-item, .flex-content ,.creator{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.flex-content{
+    justify-content: space-between;
+}
+.flex-content p{
+    padding-left: 8px;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--Soft-blue);
+}
+.creator{
+    padding-top: 20px;
+}
+.creator img{
+    width: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--white);
+}
+.creator p{
+    color: var(--Soft-blue);
+    font-size: 17px;
+    padding-left: 9px;
+}
+.creator span{
+    color: var(--white);
+}
+.creator span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
